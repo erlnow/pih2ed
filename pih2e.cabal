@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d78b59154ec20513864a7970a4a1b70293a27b6770f5b3a9f1399fe617144591
+
+name:           pih2e
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https:/github.com/erlestau/pih2e#radme>
+homepage:       https://github.com/erlnow/pih2e#readme
+bug-reports:    https://github.com/erlnow/pih2e/issues
+author:         erlnow
+maintainer:     erlestau@gmail.com
+copyright:      (c) 2010-2020 Eduardo Ramon Lestau
+license:        BSD3
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/erlnow/pih2e
+
+library
+  exposed-modules:
+      Intro
+  other-modules:
+      Paths_pih2e
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010

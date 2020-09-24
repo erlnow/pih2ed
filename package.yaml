@@ -1,0 +1,26 @@
+name: pih2e
+version: 0.1.0.0
+github: "erlnow/pih2e"
+license: BSD3
+author: "erlnow"
+maintainer: "erlestau@gmail.com"
+copyright: "(c) 2010-2020 Eduardo Ramon Lestau"
+
+#extra-source-dirs:
+#  - README.md
+#  - ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https:/github.com/erlestau/pih2e#radme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
