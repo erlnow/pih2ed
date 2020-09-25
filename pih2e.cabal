@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0208444129980e8e1b5f06787acc10796fdb97106dbb701b8a3286de51e91c83
+-- hash: 5d9a0f4245a53d35ba47a2f1c6bc7d2b92659a863c8bbeb7cf9bb5a236147769
 
 name:           pih2e
-version:        0.1.0.2
+version:        0.1.0.3
 description:    Please see the README on GitHub at <https://github.com/erlnow/pih2e#readme>
 homepage:       https://github.com/erlnow/pih2e#readme
 bug-reports:    https://github.com/erlnow/pih2e/issues
