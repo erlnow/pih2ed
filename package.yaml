@@ -17,10 +17,19 @@ copyright: "(c) 2010-2020 Eduardo Ramon Lestau"
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description: Please see the README on GitHub at <https:/github.com/erlestau/pih2e#radme>
+description: Please see the README on GitHub at <https:/github.com/erlestau/pih2e#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 
 library:
   source-dirs: src
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - pih2e
+      - hspec == 2.*
+      - hspec-discover

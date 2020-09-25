@@ -19,3 +19,12 @@ $ cd pih2e
 $ cabal repl
 ...
 ~~~
+
+## Contents
+
+### examples and code from the book
+* `src/Intro.hs` examples from *chapter 1: Introduction*
+
+### test
+* `test/Spec.hs` Main module for tests.
+* `test/IntroSpec.hs test for Intro module
