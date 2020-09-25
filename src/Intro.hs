@@ -17,6 +17,19 @@
 -- Cambridge University Press
 --
 -- Functions defined in /chapter 1: Introduction/. 
+--
+-- Note to run tests:
+--
+-- @
+--      $ cabal new-run spec
+-- @
+--
+-- or in @ghci@:
+--
+-- @
+--      $ cabal new-repl spec
+--      gchi> hspec IntroSpec.spec
+-- @
 
 module Intro (
                double

@@ -8,7 +8,9 @@ Examples and exercises from the book:
   Paperback: ISBN 978-1316626221; Kindle: ASIN B01JGMEA3U
 
 This book doesn't require a programming experience. For more information visit its
-[web](http://www.cs.nott.ac.uk/~pszgmh/pih.html).
+[web book][1]
+
+[1]: (http://www.cs.nott.ac.uk/~pszgmh/pih.html).
 
 ## Install
 
@@ -16,25 +18,44 @@ This book doesn't require a programming experience. For more information visit i
 $ git clone 
 ...
 $ cd pih2e 
-$ cabal repl
+$ cabal new-repl  # load all modules
 ...
 ~~~
 
-## Contents
+## How to code
 
-### Chapter 1: Introduction
-In this chapter the author introduce the concept of functional programming.
-In *give a taste* of Haskell, the author presents three small programs.
+In chapter 2, the author recommends to install **[Haskell Platform][1]**,
+use any editor and play with the code with `ghci` a *REPL* for Haskell
+that [Haskell Platform][1] provides.
 
-Code:
-* Intro.hs - chapter examples
-* IntroExercises.hs - chapter exercises
-* test/IntroSpec.hs - test of Intro.hs
-* test/IntroExercisesSpec.hs - test of IntroExercises.hs
+To install [Haskell Platform][1] in [Debian][2], you must type in command line:
 
-All functions are documented using [Haddoc](https://www.haskell.org/haddock/)
-and his use and properties are tested by [Hspec](https://hspec.github.io) and
-[QuickCheck](https://hackage.haskell.org/package/QuickCheck] tests.
+~~~
+  $ sudo apt-get install haskell-platform
+~~~
+
+But, many coders, doesn't follow that. For example, [Chris Allen][3] in [How
+to learn Haskell][4], article I try to follow, says to get [Stack][5].
+And links to a [comprehensive Stack video tutorial][6] and point to [mail list
+with reasons to not install][7] [Haskell Platform][1].
+
+For this project I use [Cabal][8], to create and modify `.cabal` file I
+modify `package.yaml` and run `hpack`. [Hpack][9] is a format for Haskell
+packages. Although there isn't a official reference, these [slides][10]
+are a good introduction to [Hpack][9].
+
+My editor of choice is [NeoVim][11]. For [LSP][12], I use the plugin
+[coc.nvim][13]. For Haskell I installed the language server configuration
+[Haskell Language Server][14].
+
+Normally I open many buffers and splits and tabs in [NeoVim][11]. One 
+split is a [nvim terminal emulator][15] for running `cabal new-repl` 
+that runs `ghci` and loads libraries and executable of the package.
+
+Another plugin that I recommend is [vim-fugitive][16] a plugin for `Git`.
+
+I try to document my code with [Haddock][17] and for test the code I use
+[Hspec][18] and [QuickCheck][19].
 
 To run the tests:
 
@@ -62,4 +83,45 @@ Finished in 0.0186 seconds
 6 examples, 0 failures
 ~~~
 
-###Chapte 2: First Steps
+[3]: https://github.com/bitemyapp
+[4]: https://github.com/bitemyapp/learnhaskell
+[5]: https://docs.haskellstack.org/en/stable/README/
+[6]: https://youtu.be/sRonIB8ZStw
+[7]: https://mail.haskell.org/pipermail/haskell-community/2015-September/000014.html
+[8]: <https://www.haskell.org/cabal/> "Cabal: Common Architecture for Building Application and Libraries"
+[9]: https://github.com/sol/hpack#readme
+[10]: http://typeful.net/talks/hpack "Haskell Singapore meetup" 
+[11]: https://neovim.io
+[12]: https://langserver.org
+[13]: https://github.com/neoclide/coc.nvim
+[14]: https://github.com/haskell/haskell-language-server
+[15]: https://neovim.io/doc/user/nvim_terminal_emulator.html
+[16]: https://github.com/tpope/vim-fugitive
+[17]: https://www.haskell.org/haddock/
+[18]: https://hspec.github.io/
+[17]: https://hackage.haskell.org/package/QuickCheck
+
+
+## Contents
+
+### Chapter 1: Introduction
+
+In this chapter the author introduce the concept of functional programming.
+In *give a taste* of Haskell, the author presents three small programs.
+
+Code:
+* `Intro.hs` - chapter examples
+* `IntroExercises.hs` - chapter exercises
+* `test/IntroSpec.hs` - test of `Intro.hs`
+* `test/IntroExercisesSpec.hs` - test of `IntroExercises.hs`
+
+### Chapter 2: First Steps
+
+First steps to code in Haskell. The book introduces GHC system, edit code and
+play with `ghci`.
+
+Code:
+* `MyFirst.hs` - chapter examples.
+* `MyFirstExercises.hs` - exercises
+* `test\MyFirstSpec.hs` - tests of `MyFirst.hs`.
+* `test\MyFirstExercisesSpec` - tests of `MyFirstSpecExercises.hs`

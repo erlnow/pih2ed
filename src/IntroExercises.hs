@@ -23,6 +23,13 @@
 -- @
 --      $ cabal new-run spec
 -- @
+--
+-- or in @ghci@:
+--
+-- @
+--      $ cabal new-repl spec
+--      gchi> hspec IntroExercisesSpec.spec
+-- @
 
 module IntroExercises (
                         testSumOfSingleton

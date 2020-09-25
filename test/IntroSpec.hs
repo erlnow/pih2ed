@@ -1,4 +1,14 @@
--- file IntroSpec.hs
+  -- |
+  -- Module      :  IntroSec
+  -- Copyright   :  erlnow 2020 - 2030
+  -- License     :  BSD3
+  --
+  -- Maintainer  :  erlestau@gmail.com
+  -- Stability   :  experimental
+  -- Portability :  unknown
+  --
+  -- Test module @Intro@.
+
 module IntroSpec where
 
 import Test.Hspec
