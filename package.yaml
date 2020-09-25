@@ -32,4 +32,5 @@ tests:
     dependencies:
       - pih2e
       - hspec == 2.*
-      - hspec-discover
+      - QuickCheck
+    build-tools: hspec-discover

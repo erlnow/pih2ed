@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e5bcbb01ffd4888ed9f943c007875d8588e84ff50e1b781c93229915c0908fad
+-- hash: 72d43e26451d6249f236afc7d762a8b57e8a5e50515833ecccb7e3d574d97e35
 
 name:           pih2e
 version:        0.1.0.0
@@ -24,6 +24,7 @@ source-repository head
 library
   exposed-modules:
       Intro
+      IntroExercises
   other-modules:
       Paths_pih2e
   hs-source-dirs:
@@ -36,13 +37,16 @@ test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      IntroExercisesSpec
       IntroSpec
       Paths_pih2e
   hs-source-dirs:
       test
+  build-tool-depends:
+      hspec-discover:hspec-discover
   build-depends:
-      base >=4.7 && <5
+      QuickCheck
+    , base >=4.7 && <5
     , hspec ==2.*
-    , hspec-discover
     , pih2e
   default-language: Haskell2010
