@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5d9a0f4245a53d35ba47a2f1c6bc7d2b92659a863c8bbeb7cf9bb5a236147769
+-- hash: 0c2d998de96380fd42ec319628627ba8f5d561f52e6fa664bf5d3d9b4294642a
 
 name:           pih2e
 version:        0.1.0.3
@@ -27,6 +27,8 @@ library
       IntroExercises
       MyFirst
       MyFirstExercises
+      TypesAndClasses
+      TypesAndClassesExercises
   other-modules:
       Paths_pih2e
   hs-source-dirs:
@@ -43,6 +45,8 @@ test-suite spec
       IntroSpec
       MyFirstExercisesSpec
       MyFirstSpec
+      TypesAndClassesExercisesSpec
+      TypesAndClassesSpec
       Paths_pih2e
   hs-source-dirs:
       test

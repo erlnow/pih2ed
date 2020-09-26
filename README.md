@@ -121,7 +121,19 @@ First steps to code in Haskell. The book introduces GHC system, edit code and
 play with `ghci`.
 
 Code:
-* `MyFirst.hs` - chapter examples.
 * `MyFirstExercises.hs` - exercises
 * `test\MyFirstSpec.hs` - tests of `MyFirst.hs`.
 * `test\MyFirstExercisesSpec` - tests of `MyFirstSpecExercises.hs`
+### Chapter 3: Types and classes
+
+A type is a collection of related values. In this chapter explain
+what is a type, basic types of Haskell and two compound types: lists
+and tuples. Functions have a type too. Concepts as curried functions.
+Many functions can apply to values of any type, there is something
+called *class constrains*, with this concept explains *Overload Types
+and operators*.  Presents some *Basic classes* an its overload
+operators.
+
+Code:
+* TypesAndClasses.hs chapter's examples.
+* test/TypesAndClassesSpec.hs test and uses of module `TypesAndClasses`.
