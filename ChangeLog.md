@@ -2,6 +2,18 @@
 
 ## Unreleased changes
 
+## 0.1.0.4 2020-9-27  Chapter 4
+
+### Added
+
+* DefiningFunctions.hs examples from chapter 4: Defining Functions
+* test/DefiningFunctionsSpec.hs
+
+### Changed 
+
+* README.md cite exercises from chapter 3 that i forgot to mention.
+* package.yaml, pih2e.cabal new version
+
 ## 0.1.0.3 2020-9-27  Chapter 3
 
 ### Added
@@ -12,7 +24,7 @@ Examples from chapter 3: Types and classes
 
 Exercise 1, 2 and 3
 * TypesAndClassesExercises
-* TypesAndClassesExercisesSpec
+* test/TypesAndClassesExercisesSpec
 
 
 ### Changed
