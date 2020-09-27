@@ -2,18 +2,26 @@
 
 ## Unreleased changes
 
-## 0.1.0.3 2020-9-2  Chapter 3
+## 0.1.0.3 2020-9-27  Chapter 3
 
 ### Added
 
 Examples from chapter 3: Types and classes
 * TypesAndClasses.hs
+* test/TypesAndClassesSpec.hs
+
+Exercise 1, 2 and 3
+* TypesAndClassesExercises
+* TypesAndClassesExercisesSpec
+
 
 ### Changed
 
 * New version
   * package.yaml
   * pih2e.cabal
+  * README
+  * ChangeLog
 
 ## 0.1.0.2 2020-9-25 Examples and exercises from chapter 2
 
