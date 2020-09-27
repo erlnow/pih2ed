@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:pih2e"
+
+    - path: "test"
+      component: "pih2e:test:spec"
