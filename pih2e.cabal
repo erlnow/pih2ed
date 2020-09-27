@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6d49804b983fe18e8b96a1483331386554be86f823aabd200517c8f6ed3c125c
+-- hash: 8125a9f36730f7b6540a9acfc01833c9adf7dc4a8eb15f46c323f979f02796ba
 
 name:           pih2e
 version:        0.1.0.4
@@ -42,6 +42,7 @@ test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      DefiningFunctionsSpec
       IntroExercisesSpec
       IntroSpec
       MyFirstExercisesSpec
