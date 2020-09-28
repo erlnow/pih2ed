@@ -26,10 +26,12 @@ module DefiningFunctions (
                            even , splitAt , recip
                          , abs , signum
                          , abs', signum'
-
+                         , not, (&&) 
+                         , fst, snd
 ) where
 
-import Prelude hiding (even, splitAt, recip, abs, signum)
+import Prelude hiding (even, splitAt, recip, abs, signum
+                      , not, (&&), fst, snd)
 --
 -- 4.1 New from old
 --
@@ -75,3 +77,37 @@ signum' n
   | n < 0     = -1
   | n == 0    =  0
   | otherwise =  1
+
+--
+-- 4.4 Pattern matching
+--
+
+-- | Boolean not
+not :: Bool -> Bool
+not False = True
+not True = False
+
+-- (&&) example of more than one argument
+(&&) :: Bool -> Bool -> Bool
+-- True  && True  = True
+-- True  && False = False
+-- False && True  = False
+-- False && False = False
+--
+-- Can be simplified, as:
+-- True && True = True
+-- _    && _    = False
+--
+-- Or, using only first argument:
+True  && b = b
+False && _ = False
+
+-- tuple patterns
+
+-- |Extract the first component of a pair
+fst :: (a, b) -> a
+fst (x,_) = x
+
+-- |Extract the second component of a pair
+snd :: (a, b) -> b
+snd (_,y) = y 

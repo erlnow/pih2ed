@@ -28,6 +28,8 @@ import Test.Hspec
 import Test.QuickCheck
 import DefiningFunctions as M
 
+import Prelude hiding (not,(&&))
+
 spec :: Spec
 spec = do
   describe "New from old" $ do
@@ -75,3 +77,15 @@ spec = do
       \x -> M.abs x == abs' x
     it " signum == signum'" $ property $ do
       \x -> M.signum x == signum' x
+
+  describe "Pattern matching" $ do
+    context "simply arguments" $ do
+      it "not" $ do
+        not True `shouldBe` False
+      it "&&" $ do
+        True && False `shouldBe` False
+    context "tuple patterns" $ do
+      it "fst" $ do
+        M.fst (0, 1) `shouldBe` 0
+      it "snd" $ do
+        M.snd (0,1) `shouldBe` 1
