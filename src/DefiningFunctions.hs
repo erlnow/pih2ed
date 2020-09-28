@@ -28,10 +28,11 @@ module DefiningFunctions (
                          , abs', signum'
                          , not, (&&) 
                          , fst, snd
+                         , test, head, tail
 ) where
 
 import Prelude hiding (even, splitAt, recip, abs, signum
-                      , not, (&&), fst, snd)
+                      , not, (&&), fst, snd, head, tail)
 --
 -- 4.1 New from old
 --
@@ -111,3 +112,18 @@ fst (x,_) = x
 -- |Extract the second component of a pair
 snd :: (a, b) -> b
 snd (_,y) = y 
+
+-- list patterns
+
+-- | Test if a list of three chars beginning with 'a'
+test :: [Char] -> Bool
+test ['a',_,_] = True
+test _         = False
+
+-- | Extract the first element of a list
+head :: [a] -> a
+head (x:_) = x
+
+-- | Extract the element after the head of a list
+tail :: [a] -> [a]
+tail (_:xs) = xs

@@ -26,9 +26,10 @@ module DefiningFunctionsSpec (spec) where
 
 import Test.Hspec
 import Test.QuickCheck
+import Control.Exception (evaluate)
 import DefiningFunctions as M
 
-import Prelude hiding (not,(&&))
+import Prelude hiding (not,(&&), head, tail)
 
 spec :: Spec
 spec = do
@@ -89,3 +90,14 @@ spec = do
         M.fst (0, 1) `shouldBe` 0
       it "snd" $ do
         M.snd (0,1) `shouldBe` 1
+    context "list patterns" $ do
+      it "test" $ do
+        test "abc" `shouldBe` True
+      it "head" $ do
+        head [1,2,3] `shouldBe` 1
+      it "tail" $ do
+        tail [1,2,3] `shouldBe` [2,3]
+      it "head with []" $ do
+        evaluate (head []) `shouldThrow` anyException
+      it "tail with []" $ do
+        evaluate (tail []) `shouldThrow` anyException 
