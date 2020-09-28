@@ -23,11 +23,10 @@
 -- @
 
 module DefiningFunctions (
-                           even
-                         , splitAt
-                         , recip
-                         , abs
-                         , signum
+                           even , splitAt , recip
+                         , abs , signum
+                         , abs', signum'
+
 ) where
 
 import Prelude hiding (even, splitAt, recip, abs, signum)
@@ -59,3 +58,20 @@ abs n = if n > 0 then n else -n
 signum :: Int -> Int
 signum n = if n < 0 then -1 else
               if n == 0 then 0 else 1 
+
+--
+-- 4.3 Guarded equations
+--
+
+-- | 'abs'' absolute value
+abs' :: Int -> Int
+abs' n
+  | n >= 0    =  n
+  | otherwise = -n
+
+-- | Sign of a number.
+signum' :: Int -> Int
+signum' n
+  | n < 0     = -1
+  | n == 0    =  0
+  | otherwise =  1

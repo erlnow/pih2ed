@@ -69,3 +69,9 @@ spec = do
         \x -> M.abs x >= 0
       it "signum x abs of a number is this number" $ property $ do
         \x -> (M.abs x) * (M.signum x) == x
+
+  describe "Guarded equations" $ do
+    it " abs == abs'" $ property $ do
+      \x -> M.abs x == abs' x
+    it " signum == signum'" $ property $ do
+      \x -> M.signum x == signum' x
