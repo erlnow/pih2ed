@@ -23,9 +23,14 @@
 -- @
 
 module DefiningFunctions (
+                           even
+                         , splitAt
+                         , recip
+                         , abs
+                         , signum
 ) where
 
-import Prelude hiding (even, splitAt, recip)
+import Prelude hiding (even, splitAt, recip, abs, signum)
 --
 -- 4.1 New from old
 --
@@ -41,3 +46,16 @@ splitAt n xs = (take n xs, drop n xs)
 -- |The 'recip' function returns the reciprocate
 recip :: Fractional a => a -> a
 recip n = 1/n
+
+--
+-- 4.2 Conditional examples
+--
+
+-- | 'abs' absolute value
+abs :: Int -> Int
+abs n = if n > 0 then n else -n
+
+-- | Sign of a number.
+signum :: Int -> Int
+signum n = if n < 0 then -1 else
+              if n == 0 then 0 else 1 
