@@ -29,7 +29,7 @@ import Test.QuickCheck
 import Control.Exception (evaluate)
 import DefiningFunctions as M
 
-import Prelude hiding (not,(&&), head, tail)
+import Prelude hiding (not,(&&), head, tail, const, sum)
 
 spec :: Spec
 spec = do
@@ -101,3 +101,15 @@ spec = do
         evaluate (head []) `shouldThrow` anyException
       it "tail with []" $ do
         evaluate (tail []) `shouldThrow` anyException 
+
+  describe "lambda expressions" $ do
+    it "add" $ do
+      add 1 2 `shouldBe` 3
+    it "const" $ do
+      const 42 "hello" `shouldBe` 42 
+    it "odds" $ do
+      odds 5 `shouldBe` [1, 3, 5, 7, 9]
+
+  describe "operator sections" $ do
+    it "sum" $ do
+      sum [0..10] `shouldBe` 55

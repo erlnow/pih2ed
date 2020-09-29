@@ -29,10 +29,13 @@ module DefiningFunctions (
                          , not, (&&) 
                          , fst, snd
                          , test, head, tail
+                         , add, const, odds
+                         , sum
 ) where
 
 import Prelude hiding (even, splitAt, recip, abs, signum
-                      , not, (&&), fst, snd, head, tail)
+                      , not, (&&), fst, snd, head, tail
+                      , const, sum)
 --
 -- 4.1 New from old
 --
@@ -127,3 +130,23 @@ head (x:_) = x
 -- | Extract the element after the head of a list
 tail :: [a] -> [a]
 tail (_:xs) = xs
+
+--
+-- 4.5 lambda expressions
+--
+
+-- add two numbers
+add :: Int -> (Int -> Int)              -- take an int and return a function
+add = \x -> (\y -> x + y)               -- formalised the meaning of curried function
+
+-- const evaluate to x
+const :: a -> (b -> a)
+const x = \_ -> x
+
+-- only odds numbers
+odds :: Int -> [Int]
+odds n = map (\x -> x*2 + 1) [0..n-1] 
+
+-- sum of all elements
+sum :: [Int] -> Int
+sum = foldl (+) 0
