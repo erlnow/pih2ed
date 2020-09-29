@@ -148,3 +148,8 @@ using conditional expression, guards o pattern matching and lambda
 expression are introduced in this chapter.
 
 Code:
+* DefiningFunctions.hs
+* DefiningFunctionsExercises.hs
+* test/DefiningFunctionsSpec.hs
+* test/DefiningFunctionsExercisesSpec.hs
+
