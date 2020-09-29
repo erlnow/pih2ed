@@ -2,6 +2,11 @@
 
 ## Unreleased changes
 
+## 0.1.0.1 2020-10-29 Exercises chapter 1
+
+### Changed
+IntroExercises fix haddock warning: 'Prelude' is out of scope.
+
 ## 0.1.0.1 2020-10-25 Exercises chapter 1
 
 ### Added

@@ -49,7 +49,7 @@ testSumOfSingleton   _    = error "It isn't a Singleton"
 -- The 'product' function takes a list of number and
 -- calculates their product.
 --
--- Note: 'product' is a function defined in 'Prelude'
+-- Note: 'product' is a function defined in Prelude
 -- I must to hide the 'Prelude.product'.
 product :: Num p => [p] -> p
 product (x:xs) = x * product(xs)
