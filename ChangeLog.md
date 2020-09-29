@@ -4,6 +4,11 @@
 
 ## 0.1.0.3 2020-9-27  Chapter 3
 
+## Changed
+* TypesAndClassesExercises.hs added documentation
+
+## 0.1.0.3 2020-9-27  Chapter 3
+
 ### Added
 
 Examples from chapter 3: Types and classes
