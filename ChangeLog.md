@@ -2,10 +2,11 @@
 
 ## Unreleased changes
 
-## 0.1.0.3 2020-9-27  Chapter 3
+## 0.1.0.3 2020-9-29  Chapter 3
 
 ## Changed
 * TypesAndClassesExercises.hs added documentation
+* ChangeLog.md
 
 ## 0.1.0.3 2020-9-27  Chapter 3
 
