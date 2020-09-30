@@ -15,9 +15,19 @@
 * Examples and exercises from chapter 15: Lazy evaluation
 * Examples and exercises from chapter 16: Reasoning about programs
 * Examples and exercises from chapter 17: Calculating compilers
-* Fix documentation chapter 1 - 5
+* Fix documentation chapter 2 - 5
 
 
+## 0.1.0.4 2020-9-30 Improve documentation
+
+### Changed
+
+Better readability, fix markup, spelling, etc.
+
+* src/Intro.hs
+* test/IntroSpec.hs 
+* src/IntroExercises.hs
+* test/IntroExercisesSpec.hs
 
 ## 0.1.0.4 2020-9-30  Chapter 4
 

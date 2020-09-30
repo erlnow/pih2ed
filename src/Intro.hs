@@ -28,7 +28,7 @@
 --
 -- @
 --      $ cabal new-repl spec
---      gchi> hspec IntroSpec.spec
+--      ghci> hspec IntroSpec.spec
 -- @
 
 module Intro (
@@ -43,62 +43,56 @@ module Intro (
 -- But, when we define a function with the same name that an other function
 -- declared in 'Prelude' then could throw an error:
 --
--- @
 -- Ambiguous occurrence 'sum'
 -- It could refer to either 'Prelude.Sum'
 --                          imported from 'Prelude' at src/Intro.hs:21:8-12
 --                          (and originally defined in 'Data.Foldable'
 --                       or 'Intro.sum', define at src/Intro.hs:40:1
--- @
 --
 -- To prevent this, I import 'Prelude' explicitly and hide definitions
 -- defined in this module.
 --
 -- In the book, the function definition have not type. I add a type
 -- for each function for haddock documentation.
+
 import Prelude hiding (sum)
 
--- |The 'double' function doubles a number. 
+-- |Doubles a number. 
 --
 -- Examples:
 --
--- @
---      > double 3
---      6
---      > double (double 4)
---      16
--- @
+-- >>> double 3
+-- 6
 --
--- Defined in /1.1 Functions/ pag. 3
+-- >>> double (double 4)
+-- 16
+--
+-- Defined in /1.1 Functions/ p. 3
 double :: Num a => a -> a
 double x = x + x
 
--- |The function 'sum' sums all element of a list.
---
+-- |Summatory of all elements of a list.
+-- 
+-- This definition hides the 'Prelude.sum' in "Prelude" definition.
 -- Example:
 --
--- @
---      > sum [1,2,3]
---      6
--- @
+-- >>> sum [1,2,3]
+-- 6
 --
--- Defined in /1.5 A taste of Haskell/ pag. 9
+-- Defined in /1.5 A taste of Haskell/ p. 9
 sum :: Num a => [a] -> a
 sum []       = 0
 sum (x:xs)   = x + sum xs
 
 
--- |The function 'qsort' sorts a list from smaller
--- to larger. 'qsort' uses the method called /quick-sort/.
+-- |Sorts a list using the /quick sort/ method.
 --
 -- Example:
 --
--- @
---      > qsort [3,5,1,4,2]
---      [1,2,3,4,5]
--- @
+-- >>> qsort [3,5,1,4,2]
+-- [1,2,3,4,5]
 --
--- Defined in /1.5 A taste of Haskell/ pag. 10
+-- Defined in /1.5 A taste of Haskell/ p. 10
 qsort :: Ord a => [a] -> [a]
 qsort []     = []
 qsort (x:xs) = qsort smaller ++ [x] ++ qsort larger
@@ -106,21 +100,14 @@ qsort (x:xs) = qsort smaller ++ [x] ++ qsort larger
     smaller = [a | a <- xs, a <= x]
     larger  = [a | a <- xs, a > x]
 
--- | The function 'seqn' takes a list of input/output actions,
--- such as reading or writing a single character, performs each of
--- this actions in sequence, and returns a list of resulting values.
---
--- In fact, the function 'seqn' in more general.. input/output actions
--- is only a case, it can be used to sequence any type of actions.
+-- |Performs a list of actions in sequence.
 --
 -- Example:
 --
--- @
---      > seqn [getChar,getChar,getChar]
---      abc"abc"
--- @
+-- >>> seqn [getChar, getChar, getChar]
+-- abc"abc"
 --
--- The function 'seqn' is defined in /1.5 A taste of Haskell/, pag. 12
+-- Defined in /1.5 A taste of Haskell/, p. 12
 seqn :: Monad m => [m a] -> m [a]
 seqn []         = return []
 seqn (act:acts) = do x  <- act
