@@ -7,7 +7,7 @@
 -- Stability   :  experimental
 -- Portability :  unknown
 --
--- Tests of MyFirstExerces
+-- Tests of MyFirstExercises
 
 module MyFirstExercisesSpec (spec) where
   
