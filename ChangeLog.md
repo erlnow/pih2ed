@@ -2,6 +2,11 @@
 
 ## Unreleased changes
 
+## 0.1.0.1 2020-10-29 Exercises chapter 1
+
+### Changed
+IntroExercises fix haddock warning: 'Prelude' is out of scope.
+
 ## 0.1.0.3 2020-9-29  Chapter 3
 
 ## Changed
@@ -19,7 +24,6 @@ Examples from chapter 3: Types and classes
 Exercise 1, 2 and 3
 * TypesAndClassesExercises
 * TypesAndClassesExercisesSpec
-
 
 ### Changed
 
