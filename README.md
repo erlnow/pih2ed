@@ -124,6 +124,7 @@ Code:
 * `MyFirstExercises.hs` - exercises
 * `test\MyFirstSpec.hs` - tests of `MyFirst.hs`.
 * `test\MyFirstExercisesSpec` - tests of `MyFirstSpecExercises.hs`
+
 ### Chapter 3: Types and classes
 
 A type is a collection of related values. In this chapter explain
@@ -137,3 +138,18 @@ operators.
 Code:
 * TypesAndClasses.hs chapter's examples.
 * test/TypesAndClassesSpec.hs test and uses of module `TypesAndClasses`.
+* TypesAndClassesExercises.hs chapter's exercises.
+* test/TypesAndClassesExercisesSpec.hs test and uses of module 'TypesAndClassesExercises'.
+
+### Chapter 4: Defining functions
+
+Concepts like make functions combining other functions,
+using conditional expression, guards o pattern matching and lambda
+expression are introduced in this chapter.
+
+Code:
+* DefiningFunctions.hs
+* DefiningFunctionsExercises.hs
+* test/DefiningFunctionsSpec.hs
+* test/DefiningFunctionsExercisesSpec.hs
+
