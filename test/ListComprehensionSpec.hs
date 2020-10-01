@@ -48,3 +48,14 @@ spec = do
       primes 40 `shouldBe` [2,3,5,7,11,13,17,19,23,29,31,37]
     it "find" $ do
       find 'b' [('a',1),('b',2),('c',3),('b',4)] `shouldBe` [2,4]
+
+  describe "The zip function" $ do
+    it "pairs" $ do
+      pairs [1,2,3,4] `shouldBe` [(1,2),(2,3),(3,4)]
+    context "sorted" $do
+      it "sorted" $ do
+        sorted [1,2,3,4] `shouldBe` True
+      it "not sorted" $ do
+        sorted [1,3,2,4] `shouldBe` False
+    it "positions" $ do
+      positions False [True, False, True, False] `shouldBe` [1,3]

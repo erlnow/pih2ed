@@ -23,10 +23,12 @@
 -- @
 
 module ListComprehension (
-                         -- * 5.1 Basic concepts, pp. 47,48
+                         -- *5.1 Basic concepts, pp. 47,48
                            concat, firsts, length
                          -- *5.2 Guards, pp. 48-50
                          , factors, prime, primes, find
+                         -- *5.3 The @zip@ function, pp. 50,51
+                         , pairs, sorted, positions
 ) where
 
 import Prelude hiding (concat, length)
@@ -65,3 +67,15 @@ primes n = [x | x <- [2..n], prime x]   -- There is a more efficient algorithm,
 -- of pairs (key, value).
 find :: Eq a => a -> [(a,b)] -> [b]
 find k t = [v | (k',v) <- t, k == k']
+
+-- |Returns the list of all pairs of adjacent element from a list
+pairs :: [a] -> [(a,a)]
+pairs xs = zip xs (tail xs)
+
+-- |Decides if a list of elements is sorted
+sorted :: Ord a => [a] -> Bool
+sorted xs = and [ x <= y | (x, y) <- pairs xs] 
+
+-- |Returns a list of all positions at which a value occurs in a list
+positions :: Eq a => a -> [a] -> [Int]
+positions x xs = [i | (x',i) <- zip xs [0..], x == x'] 
