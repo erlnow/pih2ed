@@ -19,7 +19,7 @@
 --
 -- @
 --      $ cabal new-repl spec
---      gchi> hspec DefiningFunctionsExercisesSpec.spec
+--      ghci> hspec DefiningFunctionsExercisesSpec.spec
 -- @
 
 module DefiningFunctionsExercisesSpec (spec) where
@@ -34,13 +34,13 @@ spec = do
       halve [1,2,3,4,5,6] `shouldBe` ([1,2,3],[4,5,6])
 
   describe "Exercise 2" $ do
-    context "case a. with head and tail" $ do
+    context "case a with head and tail" $ do
       it "third [1,2,3,4,5] == 3" $ do
         thirdA [1,2,3,4,5] `shouldBe` 3
-    context "case b. with !!" $ do
+    context "case b.) with !!" $ do
       it "third [1,2,3,4,5] == 3" $ do
         thirdB [1,2,3,4,5] `shouldBe` 3
-    context "case c. with pattern matching" $ do
+    context "case c with pattern matching" $ do
       it "third [1,2,3,4,5] == 3" $ do
         thirdC [1,2,3,4,5] `shouldBe` 3
 
@@ -62,7 +62,7 @@ spec = do
         safetailC [1,2,3] `shouldBe` [2,3]
 
   describe "Exercise 4" $ do
-    context "Caso 1" $ do
+    context "Case 1" $ do
       it "True || True == True" $ do
         True `disjunctionA` True `shouldBe` True
       it "True || False == True" $ do
@@ -71,7 +71,7 @@ spec = do
         False `disjunctionA` True `shouldBe` True
       it "False || False == False" $ do
         False `disjunctionA` False `shouldBe` False
-    context "Caso 2" $ do
+    context "Case 2" $ do
       it "True || True == True" $ do
         True `disjunctionB` True `shouldBe` True
       it "True || False == True" $ do
@@ -80,7 +80,7 @@ spec = do
         False `disjunctionB` True `shouldBe` True
       it "False || False == False" $ do
         False `disjunctionB` False `shouldBe` False
-    context "Caso 3" $ do
+    context "Case 3" $ do
       it "True || True == True" $ do
         True `disjunctionC` True `shouldBe` True
       it "True || False == True" $ do
@@ -89,7 +89,7 @@ spec = do
         False `disjunctionC` True `shouldBe` True
       it "False || False == False" $ do
         False `disjunctionC` False `shouldBe` False
-    context "Caso 4" $ do
+    context "Case 4" $ do
       it "True || True == True" $ do
         True `disjunctionD` True `shouldBe` True
       it "True || False == True" $ do
@@ -122,7 +122,6 @@ spec = do
   describe "Exercise 7" $ do
     it "mult 3 4 5 == 60" $ do
       mult 3 4 5 `shouldBe` 60
-
 
   describe "Exercise 8" $ do
     it "luhnDouble 3 == 6" $ do
