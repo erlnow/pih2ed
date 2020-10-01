@@ -18,6 +18,10 @@
 
 ## 0.1.0.5 2020-10-1 Chapter 5: List comprehension
 
+### Added
+* src/ListComprehension.hs
+* test/ListComprehensionSpec.hs
+
 ### Changed
 * package.yaml -- New version
 * pih2e.cabal
