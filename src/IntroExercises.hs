@@ -32,57 +32,65 @@
 -- @
 
 module IntroExercises (
+                      -- *__Exercise 2__, p. 13:
+                      --
+                      -- $ex2
                         testSumOfSingleton
+                      -- *__Exercise 3__, p. 13:
+                      --
+                      -- $ex3
                       , product
+                      -- *__Exercise 4__, p. 13:
+                      --
+                      -- $ex4
                       , qsortRev
+                      -- *__Exercise 5__, p. 13
+                      --
+                      -- $ex5
                       , qsort
 ) where
 
 import Prelude hiding (sum, product)
 import Intro (sum) 
 
--- |__Exercise 2__, p. 13:
---
+-- $ex2
 -- Show that @sum [x] == x@ for any number @x@.
---
--- The 'testSumOfSingleton' function probes that
+
+-- |The 'testSumOfSingleton' function probes that
 --
 -- >prop testSumOfSingleton [x] == True
 testSumOfSingleton :: (Eq a, Num a) => [a] -> Bool
 testSumOfSingleton (x:[]) = sum [x] == x
 testSumOfSingleton   _    = error "It isn't a Singleton"
 
--- |__Exercise 3__, p. 13:
---
+-- $ex3
 -- Define a function __@product@__ that produces the product of a 
 -- list of numbers and show your definition that @product [2,3,4] = 24@.
---
--- The 'product' function takes a list of number and
+
+-- |The 'product' function takes a list of number and
 -- calculates their product.
 --
 -- This definition hides 'Prelude.product' definition in "Prelude".
 product :: Num p => [p] -> p
 product (x:xs) = x * product(xs)
  
--- |__Exercise 4__, p. 13:
---
+-- $ex4
 -- How should the definition of the function @qsort@ be modified so that 
 -- it produces a /reverse/ sorted version of a list?
---
--- Sorts a list in /reverse/ order. 'qsortRev' uses the /quick sort/ method.
+
+-- |Sorts a list in /reverse/ order. 'qsortRev' uses the /quick sort/ method.
 qsortRev :: (Ord a, Num a) => [a] -> [a]
 qsortRev []     = []
 qsortRev (x:xs) = qsortRev larger ++ [x] ++ qsortRev smaller
   where larger  = [x' | x' <- xs, x' > x]
         smaller = [x' | x' <- xs, x' <= x]
 
--- |__Exercise 5__, p. 13
---
+-- $ex5
 -- What would be the effect of replacing @<=@ by @<@ in the
 -- original 'Intro.qsort'? Hint: consider the example of
--- @qsort [2,2,3,1,1]
---
--- This 'qsort' definition sort a list and replace all
+-- @qsort [2,2,3,1,1]@
+
+-- |This 'qsort' definition sort a list and replace all
 -- repeated elements but one.
 qsort :: Ord a => [a] -> [a]
 qsort []     = []
