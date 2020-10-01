@@ -16,6 +16,13 @@
 * Examples and exercises from chapter 16: Reasoning about programs
 * Examples and exercises from chapter 17: Calculating compilers
 
+## 0.1.0.5 2020-10-1 Chapter 5: List comprehension
+
+### Changed
+* package.yaml -- New version
+* pih2e.cabal
+* ChangeLog.md
+
 ## 0.1.0.4 2020-9-30 Improve documentation
 
 ### Changed

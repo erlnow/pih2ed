@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4baf12178c2f9853efb5210ff9ac8e91d69bb8237df28119cfeec587d50d4a25
+-- hash: c9eb020fe70da8fe561c7473e3ef9d3a3f3de8715d0335b89134eaa752f79da5
 
 name:           pih2e
-version:        0.1.0.4
+version:        0.1.0.5
 description:    Please see the README on GitHub at <https://github.com/erlnow/pih2e#readme>
 homepage:       https://github.com/erlnow/pih2e#readme
 bug-reports:    https://github.com/erlnow/pih2e/issues
@@ -27,6 +27,7 @@ library
       DefiningFunctionsExercises
       Intro
       IntroExercises
+      ListComprehension
       MyFirst
       MyFirstExercises
       TypesAndClasses
@@ -47,6 +48,7 @@ test-suite spec
       DefiningFunctionsSpec
       IntroExercisesSpec
       IntroSpec
+      ListComprehensionSpec
       MyFirstExercisesSpec
       MyFirstSpec
       TypesAndClassesExercisesSpec
