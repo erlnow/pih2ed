@@ -59,3 +59,9 @@ spec = do
         sorted [1,3,2,4] `shouldBe` False
     it "positions" $ do
       positions False [True, False, True, False] `shouldBe` [1,3]
+
+  describe "String comprehension" $ do
+    it "lowers" $ do
+      lowers "Haskell" `shouldBe` 6
+    it "count" $ do
+      count 's' "Mississippi" `shouldBe` 4

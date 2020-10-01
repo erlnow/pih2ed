@@ -29,6 +29,8 @@ module ListComprehension (
                          , factors, prime, primes, find
                          -- *5.3 The @zip@ function, pp. 50,51
                          , pairs, sorted, positions
+                         -- *5.4 String comprehensions
+                         , lowers, count
 ) where
 
 import Prelude hiding (concat, length)
@@ -79,3 +81,11 @@ sorted xs = and [ x <= y | (x, y) <- pairs xs]
 -- |Returns a list of all positions at which a value occurs in a list
 positions :: Eq a => a -> [a] -> [Int]
 positions x xs = [i | (x',i) <- zip xs [0..], x == x'] 
+
+-- |Returns the number of lower-case letters in a string
+lowers :: String -> Int
+lowers xs = length [ x | x <- xs, x >= 'a' && x <= 'z']
+
+-- |${count}
+count :: Char -> String -> Int 
+count x xs = length [x' | x' <- xs, x == x'] 
