@@ -19,7 +19,7 @@
 --
 -- @
 --      $ cabal new-repl spec
---      gchi> hspec TypesAndClassesSpec.spec
+--      ghci> hspec TypesAndClassesSpec.spec
 -- @
 
 module TypesAndClassesSpec (spec) where
@@ -39,6 +39,6 @@ spec = do
     it "both functions should return the same" $ property $
       \x -> (\y -> add (x,y) == add' x y)
 
-  describe "function with more than two args" $ do
+  describe "function with more than two arguments" $ do
     it "mult x y z" $ do
       mult 3 7 1 `shouldBe` 21
