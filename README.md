@@ -69,7 +69,7 @@ IntroExercises
       +++ OK, passed 100 tests.
   qsortRev
     qsort reverse order
-  qsort mofied
+  qsort modified
     elminate duplicated
 Intro
   double
@@ -153,3 +153,17 @@ Code:
 * test/DefiningFunctionsSpec.hs
 * test/DefiningFunctionsExercisesSpec.hs
 
+### Chapter 5: List Comprehensions
+
+List comprehensions is similar to comprehension notation in mathematics.
+In this chapter is explained what is list comprehension, how can be used
+to define functions with list and strings. Finally the concept is used
+in a example like code, decode and crack the *Caesar cipher*.
+
+Code:
+* src/ListComprehension.hs - examples from the chapter
+* test/ListComprehensionSpec.hs - test and uses of `ListComprehension`.
+* src/Caesar.hs - Caesar cipher example.
+* test/CaesarSpec.hs - tests and uses of module `Caesar`
+* src/ListComprehensionExercises.hs
+* test/ListComprehensionExercisesSpec.hs
