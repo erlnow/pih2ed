@@ -86,6 +86,6 @@ positions x xs = [i | (x',i) <- zip xs [0..], x == x']
 lowers :: String -> Int
 lowers xs = length [ x | x <- xs, x >= 'a' && x <= 'z']
 
--- |${count}
+-- |Return the number of occurrences of a character in a string
 count :: Char -> String -> Int 
 count x xs = length [x' | x' <- xs, x == x'] 
