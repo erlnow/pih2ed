@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c9eb020fe70da8fe561c7473e3ef9d3a3f3de8715d0335b89134eaa752f79da5
+-- hash: c4a74d2bb31989af0365c179ee593319a544d3b840e7a267937fefbfb43fc48a
 
 name:           pih2e
 version:        0.1.0.5
@@ -23,6 +23,7 @@ source-repository head
 
 library
   exposed-modules:
+      Caesar
       DefiningFunctions
       DefiningFunctionsExercises
       Intro
@@ -44,6 +45,7 @@ test-suite spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      CaesarSpec
       DefiningFunctionsExercisesSpec
       DefiningFunctionsSpec
       IntroExercisesSpec

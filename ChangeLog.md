@@ -2,7 +2,7 @@
 
 ## Unreleased changes
 
-* Examples and exercises from chapter 5: List comprehension
+* Exercises from chapter 5: List comprehension
 * Examples and exercises from chapter 6: Recursive functions
 * Examples and exercises from chapter 7: Higher-order functions
 * Examples and exercises from chapter 8: Declaring types and classes
@@ -21,6 +21,8 @@
 ### Added
 * src/ListComprehension.hs
 * test/ListComprehensionSpec.hs
+* src/Caesar.hs
+* test/CaesarSpec.hs
 
 ### Changed
 * package.yaml -- New version
