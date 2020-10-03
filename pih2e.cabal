@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c4a74d2bb31989af0365c179ee593319a544d3b840e7a267937fefbfb43fc48a
+-- hash: d85da44031711380e08ad01fc53d1a0578e205b484924bc925ed48bdfd55075b
 
 name:           pih2e
 version:        0.1.0.5
@@ -29,6 +29,7 @@ library
       Intro
       IntroExercises
       ListComprehension
+      ListComprehensionExercises
       MyFirst
       MyFirstExercises
       TypesAndClasses
@@ -50,6 +51,7 @@ test-suite spec
       DefiningFunctionsSpec
       IntroExercisesSpec
       IntroSpec
+      ListComprehensionExercisesSpec
       ListComprehensionSpec
       MyFirstExercisesSpec
       MyFirstSpec
