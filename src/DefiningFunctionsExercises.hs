@@ -7,7 +7,7 @@
 -- Stability   :  experimental
 -- Portability :  unknown
 --
--- Description
+-- Exercises from chapter 4.
 -- 
 -- Note to run tests:
 --
@@ -24,36 +24,28 @@
 
 module DefiningFunctionsExercises (
                                   -- *Exercise 1, p. 45
-                                  -- 
                                   -- $ex1
                                     halve
                                   -- *Exercise 2, p. 45
-                                  -- 
                                   -- $ex2
                                   , thirdA, thirdB, thirdC
                                   -- *Exercise 3, p. 45
-                                  --
                                   -- $ex3
                                   , safetailA, safetailB, safetailC
                                   -- *Exercise 4, p. 45:
-                                  --
                                   -- $ex4
                                   , disjunctionA, disjunctionB
                                   , disjunctionC, disjunctionD
                                   -- *Exercise 5, p.45:
-                                  --
                                   -- $ex5
                                   , op,
                                   -- *Exercise 6, p. 46:
-                                  --
                                   -- $ex6
                                   op2,
                                   -- *Exercise 7, p. 46:
-                                  -- 
                                   -- $ex7
                                   mult
                                   -- *Exercise 8, p. 46:
-                                  -- 
                                   -- $ex8
                                   , luhnDouble, luhn
 ) where
@@ -248,23 +240,21 @@ mult = \x -> (\y -> (\z -> x*y*z))
 -- Define a function @luhnDouble :: Int -> Int@ that doubles a digit and subtract
 -- 9 if the result is greater than 9. For example:
 --
--- @
---      > luhnDouble 3
---      6
---      > luhnDouble 6
---      3
--- @
+-- >>> luhnDouble 3
+-- 6
+--
+-- >>> luhnDouble 6
+-- 3
 --
 -- Using @luhnDouble@ and the integer remainder function 'mod', define a function
 -- @luhn :: Int -> Int -> Int -> Int -> Bool@ that decides if a four-digit
 -- bank card number is valid. For example:
 --
--- @
---      > luhn 1 7 8 4
---      True
---      > luhn 4 7 8 3
---      False
--- @
+-- >>> luhn 1 7 8 4
+-- True
+--
+-- >>> luhn 4 7 8 3
+-- False
 --
 -- In the exercises for chapter 7 we will consider a more general version of this
 -- function that accepts card numbers of any length.

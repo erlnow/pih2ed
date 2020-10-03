@@ -75,7 +75,7 @@ sumsqr100 = sum [x^2 | x <- [1..100]]
 -- Int -> [(Int,Int)]@ that returns a coordinate grid of a given size. For
 -- example:
 --
--- > grid 1 2
+-- >>> grid 1 2
 -- [(0,0),(0,1),(0,2),(1,0),(1,1),(1,2)]
 
 -- |Creates a /coordinate grid/ given @m@ and @n@.
@@ -87,7 +87,7 @@ grid m n = [(x,y) | x <- [0..m], y <- [0..n]]
 -- function @'square' :: Int -> [(Int,Int)]@ that returns a coordinate square of
 -- size \(n\), excluding the diagonal from \((0,0)\) to \((n,n)\). For example:
 --
--- > square 2
+-- >>> square 2
 -- [(0,1),(0,2),(1,0),(1,2),(2,0),(2,1)]
 
 -- |Returns a /coordinate grid/ excluding the diagonal from \((0,0)\) to \((n,n)\).
@@ -99,7 +99,7 @@ square n = [(x,y) | (x,y) <- grid n n, x /= y]
 -- @'replicate' :: Int -> a -> [a]@ that produces a list of identical elements
 -- can be defined using a list comprehension. For example:
 --
--- > replicate 3 True
+-- >>> replicate 3 True
 -- [True, True, True]
 
 -- |Produces a list of identical elements of size @n@.
@@ -116,7 +116,7 @@ replicate n x = [x | _ <- [1..n]]
 -- returns the list of all such triples whose components are at most a given
 -- limit. For example:
 --
--- > pyths 10
+-- >>> pyths 10
 -- [(3,4,5),(4,3,5),(6,8,10),(8,6,10)]
 
 -- |Returns /pythagorean/ numbers at most a given limit.
@@ -130,7 +130,7 @@ pyths n = [(x,y,z) | x <- [1..n], y <-[1..n], z <- [x+1..n], x^2 + y^2 == z^2]
 -- that returns the list of all perfect numbers up to a given limit. For
 -- example:
 --
--- > perfects 500
+-- >>> perfects 500
 -- [6,28,496]
 
 -- |List of /perfect/ numbers up to a given limit.
@@ -170,7 +170,7 @@ positions n xs = find n (zip xs [0..])
 -- used to define @'scalarproduct' :: [Int] -> [Int] -> Int@ that returns the
 -- scalar product of two list. For example:
 --
--- > scalarproduct [1,2,3] [4,5,6]
+-- >>> scalarproduct [1,2,3] [4,5,6]
 -- 32
 
 -- |Calculate the /scalar product/ of two list of integers
@@ -178,6 +178,7 @@ scalarproduct :: [Int] -> [Int] -> Int
 scalarproduct xs ys = sum [ x*y | (x,y) <- zip xs ys]
 
 -- $ex10
+-- Modify the Caesar cipher program to also handle upper-case letters
 
 -- |caesar
 caesar :: a

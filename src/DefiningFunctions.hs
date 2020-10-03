@@ -79,8 +79,6 @@ signum' n
   | n == 0    =  0
   | otherwise =  1
 
--- *4.4 Pattern matching, pp. 40-42
-
 -- | Boolean not
 not :: Bool -> Bool
 not False = True
@@ -127,7 +125,7 @@ tail (_:xs) = xs
 add :: Int -> (Int -> Int)              -- take an int and return a function
 add = \x -> (\y -> x + y)               -- formalized the meaning of curried function
 
--- |const evaluate to x
+-- |const evaluate to @x@
 const :: a -> (b -> a)
 const x = \_ -> x
 

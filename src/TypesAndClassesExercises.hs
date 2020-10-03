@@ -24,15 +24,12 @@
 
 module TypesAndClassesExercises (
                                 -- ** __Exercise 1__, p. 36:
-
                                 -- $ex1
                                   ex1, ex2, ex3, ex4
                                 -- ** __Exercise 2__, pp. 36,37:
-
                                 -- $ex2
                                 , bools, nums, add, copy, apply
                                 -- ** __Exercise 3__, p. 37
-
                                 -- $ex3
                                 , second, swap, pair, double
                                 , palindrome, twice
