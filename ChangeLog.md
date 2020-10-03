@@ -16,13 +16,15 @@
 * Examples and exercises from chapter 16: Reasoning about programs
 * Examples and exercises from chapter 17: Calculating compilers
 
-## 0.1.0.5 2020-10-1 Chapter 5: List comprehension
+## 0.1.0.5 2020-10-3 Chapter 5: List comprehension
 
 ### Added
 * src/ListComprehension.hs
 * test/ListComprehensionSpec.hs
 * src/Caesar.hs
 * test/CaesarSpec.hs
+* src/ListComprehensionExercises.hs
+* test/ListComprehensionExercisesSpec.hs
 
 ### Changed
 * package.yaml -- New version

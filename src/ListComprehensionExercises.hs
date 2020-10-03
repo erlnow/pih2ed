@@ -60,6 +60,8 @@ import ListComprehension (
                            factors      -- used in exercise 6
                          , find         -- used in exercise 8
                          )
+import Caesar (shift)                   -- used in exercise 10
+import Data.Char (toLower)              -- used in exercise 10
 -- $ex1
 -- Using a list comprehension, five an expression that calculates the sum of
 -- \(1^2 + 2^2 + ... 100^2\) of the first one hundred integer squares.
@@ -178,8 +180,11 @@ scalarproduct :: [Int] -> [Int] -> Int
 scalarproduct xs ys = sum [ x*y | (x,y) <- zip xs ys]
 
 -- $ex10
--- Modify the Caesar cipher program to also handle upper-case letters
+-- Modify the Caesar cipher program to also handle upper-case 
 
--- |caesar
-caesar :: a
-caesar = undefined
+-- | caesar is like 'Caesar.encode' but firstly convert
+-- upper-case characters to lower-case characters.
+--
+-- prop> xs /= caesar (-n) (caesar n xs)
+caesar :: Int -> String -> String
+caesar n xs = [shift n (toLower x) | x <- xs]
