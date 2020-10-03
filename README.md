@@ -167,3 +167,15 @@ Code:
 * test/CaesarSpec.hs - tests and uses of module `Caesar`
 * src/ListComprehensionExercises.hs
 * test/ListComprehensionExercisesSpec.hs
+
+### Chapter 6: Recursive functions
+
+Most of programming language have statements for looping or iterate.
+In Haskell, the basic mechanism for looping is __recursion__.
+
+Code:
+* src/Recursion.hs
+* src/RecursionExercises.hs
+* test/RecursionSpec.hs
+* test/RecursionExercisesSpec.hs
+

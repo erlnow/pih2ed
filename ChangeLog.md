@@ -2,7 +2,6 @@
 
 ## Unreleased changes
 
-* Exercises from chapter 5: List comprehension
 * Examples and exercises from chapter 6: Recursive functions
 * Examples and exercises from chapter 7: Higher-order functions
 * Examples and exercises from chapter 8: Declaring types and classes
@@ -15,6 +14,14 @@
 * Examples and exercises from chapter 15: Lazy evaluation
 * Examples and exercises from chapter 16: Reasoning about programs
 * Examples and exercises from chapter 17: Calculating compilers
+
+## 0.1.0.6 2020-10-3 Chapter 5: List comprehension
+
+## Changed
+* README.md     -- new version
+* ChangeLog.md
+* package.yaml
+* pih2e.cabal
 
 ## 0.1.0.5 2020-10-3 Chapter 5: List comprehension
 
