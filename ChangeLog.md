@@ -2,7 +2,6 @@
 
 ## Unreleased changes
 
-* Examples and exercises from chapter 6: Recursive functions
 * Examples and exercises from chapter 7: Higher-order functions
 * Examples and exercises from chapter 8: Declaring types and classes
 * Examples and exercises from chapter 9: The countdown problem
@@ -16,6 +15,10 @@
 * Examples and exercises from chapter 17: Calculating compilers
 
 ## 0.1.0.6 2020-10-3 Chapter 5: List comprehension
+
+## Added
+* src/Recursion.hs      -- Examples from chapter 6
+* test/RecursionSpec.hs -- Uses and test from functions on src/Recursion.hs
 
 ## Changed
 * README.md     -- new version
