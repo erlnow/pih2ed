@@ -17,8 +17,10 @@
 ## 0.1.0.6 2020-10-3 Chapter 5: List comprehension
 
 ## Added
-* src/Recursion.hs      -- Examples from chapter 6
-* test/RecursionSpec.hs -- Uses and test from functions on src/Recursion.hs
+* src/Recursion.hs               -- Examples from chapter 6
+* test/RecursionSpec.hs          -- Uses and test from functions on src/Recursion.hs
+* src/RecursionExercises.hs      -- Exercises from chapter 6
+* test/RecursionExercisesSpec.hs -- Uses and test of 'RecursionExercises'
 
 ## Changed
 * README.md     -- new version

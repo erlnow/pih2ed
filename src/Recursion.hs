@@ -93,7 +93,7 @@ zip (x:xs) (y:ys) = (x,y) : zip xs ys
 
 -- |Return the suffix of @xs@ after removing the first @n@ elements,
 -- or @[]@ if @n > length xs@
-drop :: Int -> [a] -> [a]
+drop :: Integral b => b -> [a] -> [a]
 drop 0 xs = xs
 drop _ [] = []
 drop n (_:xs) = drop (n-1) xs
@@ -128,6 +128,7 @@ evens     [] = []
 evens (x:xs) = x : odds xs
 
 -- |Select the elements with position odd in a list
+odds :: [a] -> [a]
 odds []     = []
 odds (_:xs) = evens xs
 
@@ -141,12 +142,12 @@ product' = foldr (*) 1
 
 -- |Return the suffix of a list after remove
 -- the @n@ first elements.
-drop' :: Int -> [a] -> [a]
-drop' 0 xs = xs
-drop' _ [] = []
-drop' n (x:xs) = drop (n-1) xs
+drop' :: Integral n => n -> [b] -> [b] 
+drop' 0 xs     = xs
+drop' _ []     = []
+drop' n (x:xs) = drop' (n-1) xs
 
 -- |Return all element of a list except the last one.
 init :: [a] -> [a]
-init [_] = []
+init [_]    = []
 init (x:xs) = x : init xs
