@@ -14,7 +14,7 @@
 * Examples and exercises from chapter 16: Reasoning about programs
 * Examples and exercises from chapter 17: Calculating compilers
 
-## 0.1.0.6 2020-10-3 Chapter 5: List comprehension
+## 0.1.0.6 2020-10-6 Chapter 5: List comprehension
 
 ## Added
 * src/Recursion.hs               -- Examples from chapter 6
